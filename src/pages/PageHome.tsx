@@ -1,6 +1,6 @@
 import { Wrapper, Link } from "../style/style"
 
-function App() {
+const  PageHome = () => {
 
   return (
     <Wrapper>
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default PageHome;

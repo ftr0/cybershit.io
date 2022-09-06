@@ -17,9 +17,9 @@ const App = () => {
       <Header>cybershit.io</Header>
       <Routes>
         <Route path="/" element={<PageHome />} />
-        <Route path="comments" element={<PageComments />} />
-        <Route path="email" element={<PageEmail />} />
-        <Route path="reports" element={<PageReports />} />
+        <Route path="/comments" element={<PageComments />} />
+        <Route path="/email" element={<PageEmail />} />
+        <Route path="/reports" element={<PageReports />} />
       </Routes>
     </Page>
   );
