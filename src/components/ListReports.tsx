@@ -19,9 +19,16 @@ const [error, setError] = useState({})
       console.log(error);
   }
 
+ 
   useEffect(() => {
     getPosts()    
-  })
+    const interval=setInterval(()=>{
+      getPosts()
+     },5000)
+     return()=>clearInterval(interval)
+  }, [])
+  
+
 
   return (
     <div>

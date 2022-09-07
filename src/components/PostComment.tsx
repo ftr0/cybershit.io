@@ -28,7 +28,7 @@ function handleClick() {
   }
   else
   {
-    fetch('https://cybershit.io/comments.php', {  
+    fetch('https://cybershit.io/api/addComment.php', {  
       method: 'POST', 
       mode: 'cors', 
       body: JSON.stringify({

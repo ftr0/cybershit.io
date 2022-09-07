@@ -28,7 +28,7 @@ height: 50px;
   font-size: 10px;
   letter-spacing: 16px;
   width: 100%;
-  height: 100px;
+  height: 150px;
   padding-top: 0px;
 }
 `
