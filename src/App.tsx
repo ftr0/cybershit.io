@@ -5,32 +5,36 @@ import PageReports from './pages/PageReports';
 import Login from './components/Login';
 
 import FadeIn from 'react-fade-in';
-
 import { Link} from "./style/StyleControls"
 import { Page,  Header} from "./style/stylePage"
-import { Routes, Route} from "react-router-dom";
+import React, { useState, useEffect} from 'react';
+
 
 const App = () => {
 
+  const [site, setSite] = useState("home");
+
+  function siteHome() { setSite("home") }
+  function siteComments() { setSite("comments") }
+  function siteEmail() { setSite("email") }
+  function siteReports() { setSite("reports") }
+  function siteAdmin() { setSite("admin") }
+
   return (
-   
-    <Page>
-      <FadeIn>
+    <Page  >
     <Header>
-      <Link href="/">home</Link> 
-      <Link href="/comments">comments</Link>
-      <Link href="/email">email</Link>
-      <Link href="/reports">reports</Link>
-      <Link href="/admin">admin</Link>
-   </Header>
-   
-      <Routes>
-        <Route path="/" element={<PageHome />} />
-        <Route path="/comments" element={<PageComments />} />
-        <Route path="/email" element={<PageEmail />} />
-        <Route path="/reports" element={<PageReports />} />
-        <Route path="/admin" element={<Login />} />
-      </Routes>
+      <Link onClick={siteHome}> home</Link>
+      <Link onClick={siteComments}> comments</Link>
+      <Link onClick={siteEmail}> email</Link>
+      <Link onClick={siteReports}> reports</Link>
+      <Link onClick={siteAdmin}> admin</Link>
+    </Header>
+      <FadeIn>
+        { site==='home' && <PageHome /> }
+        { site==='comments' && <PageComments /> }
+        { site==='email' && <PageEmail /> }
+        { site==='reports' && <PageReports /> }
+        { site==='admin' && <Login /> }
       </FadeIn>
     </Page>
   );

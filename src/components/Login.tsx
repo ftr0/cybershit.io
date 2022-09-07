@@ -43,7 +43,7 @@ const PostComment = () => {
         </Quest>
         <br/><br/><br/>
         token: <br/><Input type="password"  onChange={handleChangeAuthor} value={token} /> <br/><br/>
-        <Button onClick={handleClick}>login </Button><br/><br/>
+        <Button onClick={handleClick}>enter </Button><br/><br/>
         { check == 'yes' ? <PostReport/> : <p></p>} 
        {check}
      
