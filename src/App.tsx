@@ -3,20 +3,20 @@ import PageComments from './pages/PageComments';
 import PageEmail from './pages/PageEmail';
 import PageReports from './pages/PageReports';
 
-
-import { Page, Link, Header} from "./style/style"
+import { Link} from "./style/StyleControls"
+import { Page,  Header} from "./style/stylePage"
 import { Routes, Route} from "react-router-dom";
 
 const App = () => {
 
   return (
     <Page>
+    <Header>
       <Link href="/">home</Link> 
       <Link href="/comments">comments</Link>
       <Link href="/email">email</Link>
       <Link href="/reports">reports</Link>
-      <Link href="https://github.com/ftr0">github</Link>
-      <Header>cybershit.io</Header>
+   </Header>
       <Routes>
         <Route path="/" element={<PageHome />} />
         <Route path="/comments" element={<PageComments />} />

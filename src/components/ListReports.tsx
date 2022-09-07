@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ReportContainer } from "../style/StyleReports"
+import { ReportContainer,ReportHeader,ReportBody } from "../style/StyleReports"
 
 type Report = {
   content: string;
@@ -17,7 +17,6 @@ const [error, setError] = useState({})
     .then(res => setReports(res))
     .catch(err => setError(err))
       console.log(error);
-    
   }
 
   useEffect(() => {
@@ -28,8 +27,8 @@ const [error, setError] = useState({})
     <div>
         {reports.map(comment => ( 
             <ReportContainer>
-                {comment.date}
-              <pre>{comment.content}</pre>
+                <ReportHeader>{comment.date}</ReportHeader> 
+                <ReportBody>{comment.content} <br/><br/>homeoffice: <b>{comment.homeoffice}</b></ReportBody>
             </ReportContainer>   
          ))}  
     </div>

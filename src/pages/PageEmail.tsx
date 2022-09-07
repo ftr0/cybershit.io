@@ -1,14 +1,11 @@
-
 import EmailForm from '../components/EmailForm';
-import { Wrapper, Header } from "../style/style"
-
 
 function App() {
 
   return (
-    <Wrapper>
+    <div>
       <EmailForm /> 
-    </Wrapper>
+    </div>
   );
 }
 
