@@ -32,5 +32,12 @@ height: 50px;
   padding-top: 0px;
 }
 `
+const Quest = styled.span`
+text-align: center;
+font-size: 20px;
+color: white;
+letter-spacing: 50px;
+line-height: 3;
+`
 
-export { Page, Icon, Header};
+export { Page, Icon, Header, Quest};

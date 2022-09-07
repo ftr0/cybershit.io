@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import { Button,  TextBox, Error, Input} from "../style/StyleControls"
+import { Quest } from "../style/stylePage"
 import PostReport from ".//PostReport"
 const PostComment = () => {
 
@@ -28,7 +29,20 @@ const PostComment = () => {
 
   return (
     <div>
-        token: <Input type="password"  onChange={handleChangeAuthor} value={token} /> <br/><br/>
+        <Quest>
+            <br/>
+            fdwqwfdwqw<br/>
+            wdasdfdwqw<br/>
+            daqfdwqwqe<br/>
+            eqefdwqwqw<br/>
+            eqefdwqwqw<br/>
+            eqefdwqwqw<br/>
+            eqefdwqwqw<br/>
+            eqefdwqwqw<br/>
+            eqefdwqwqw<br/>
+        </Quest>
+        <br/><br/><br/>
+        token: <br/><Input type="password"  onChange={handleChangeAuthor} value={token} /> <br/><br/>
         <Button onClick={handleClick}>login </Button><br/><br/>
         { check == 'yes' ? <PostReport/> : <p></p>} 
        {check}
