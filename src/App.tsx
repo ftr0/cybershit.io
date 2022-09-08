@@ -4,6 +4,8 @@ import PageEmail from './pages/PageEmail';
 import PageReports from './pages/PageReports';
 import Login from './components/Login';
 import Footer from './components/Footer';
+import PageCheatSheets from './pages/PageCheatSheets';
+
 
 import FadeIn from 'react-fade-in';
 import { Link} from "./style/StyleControls"
@@ -22,6 +24,7 @@ const App = () => {
   function siteEmail() { setSite("email");click.play(); }
   function siteReports() { setSite("reports");click.play(); }
   function siteAdmin() { setSite("admin");click.play(); }
+  function siteCheatSheets() { setSite("cheatsheets");click.play(); }
 
   return (
     <Page  >
@@ -31,6 +34,7 @@ const App = () => {
       <Link  onClick={siteEmail}> email</Link>
       <Link  onClick={siteReports}> reports</Link>
       <Link  onClick={siteAdmin}> admin</Link>
+      <Link  onClick={siteCheatSheets}> cheatsheets</Link>
     </Header>
       <FadeIn>
         { site==='home' && <PageHome /> }
@@ -38,6 +42,7 @@ const App = () => {
         { site==='email' && <PageEmail /> }
         { site==='reports' && <PageReports /> }
         { site==='admin' && <Login /> }
+        { site==='cheatsheets' && <PageCheatSheets /> }
       </FadeIn>
       <Footer/>
     </Page>

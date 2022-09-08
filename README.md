@@ -1,8 +1,8 @@
 # www.cybershit.io
 
-live demo (https://cybershit.io).
+live demo https://cybershit.io
 
-## nodes
+## packages
 
 npx create-react-app cybershit --template typescript
 

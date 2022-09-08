@@ -7,6 +7,9 @@ function App() {
   return (
     <div>
      <h2>Cheats Sheets</h2>
+     <p>bla bla bla</p>
+     <p>bla  bla</p>
+     <p>bla bla bla</p>
     </div>
   );
 }

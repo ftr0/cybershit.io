@@ -3,11 +3,16 @@ import styled from 'styled-components';
 const Page = styled.div`
  width: 100%;
  text-align: center;
- background-color: #4f2a4e;
+ //background-color: #4f2a4e;
  color: white;
  font-size: 20px;
  padding-bottom:50px;
  letter-spacing: 2px;
+ background-image: url("https://cybershit.io/images/back2.svg");
+height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 
 

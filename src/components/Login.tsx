@@ -45,7 +45,7 @@ const PostComment = () => {
 
   return (
     <div>
-
+<h2>admin panel</h2>
 <br/>
 <br/>
         { check == 'yes' ? <PostReport/> : <Input type="password"  onChange={handleChangeAuthor} value={token} /> }<br/>
