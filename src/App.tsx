@@ -3,10 +3,11 @@ import PageComments from './pages/PageComments';
 import PageEmail from './pages/PageEmail';
 import PageReports from './pages/PageReports';
 import Login from './components/Login';
+import Footer from './components/Footer';
 
 import FadeIn from 'react-fade-in';
 import { Link} from "./style/StyleControls"
-import { Page,  Header} from "./style/stylePage"
+import { Page,  Header} from "./style/StylePage"
 import React, { useState, useEffect} from 'react';
 
 
@@ -38,6 +39,7 @@ const App = () => {
         { site==='reports' && <PageReports /> }
         { site==='admin' && <Login /> }
       </FadeIn>
+      <Footer/>
     </Page>
   );
 }

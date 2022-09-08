@@ -45,14 +45,14 @@ const [error, setError] = useState({})
   <Table>
 
 <tr style={{backgroundColor:"lightblue"}}>
-  <td style={{width:"30%", padding: "50px", backgroundColor:"#283b59"}}>
+  <td style={{width:"20%", padding: "50px", backgroundColor:"#283b59"}}>
 
 
-              <img src={comment.avatar} width="50%" /><br/><br/>
+              <img src={comment.avatar} width="100%" /><br/><br/>
               {comment.author}
 
   </td>
-  <td style={{width:"70%", padding: "50px", backgroundColor:"#423b59"}}>
+  <td style={{width:"80%", padding: "50px", backgroundColor:"#423b59"}}>
   <b>{new Intl.DateTimeFormat('en-GB', {
                   month: 'long',
                   day: '2-digit',
@@ -60,7 +60,7 @@ const [error, setError] = useState({})
                   hour: '2-digit',
                   minute: '2-digit',
                   //second: '2-digit',
-              }).format(new Date(comment.date))}</b><br/><br/>
+              }).format(new Date(comment.date))} Uhr</b><br/><br/>
           {comment.comment
                       .replace(':-)', '😜')
                       .replace(':-(', '😒')

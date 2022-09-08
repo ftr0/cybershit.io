@@ -46,14 +46,11 @@ const PostComment = () => {
   return (
     <div>
 
-
-
-        { check == 'yes' ? <PostReport/> : <Input type="password"  onChange={handleChangeAuthor} value={token} /> }
-        { check == 'yes' ? <p></p>:  <Button onClick={handleClick}>enter </Button> }
+<br/>
+<br/>
+        { check == 'yes' ? <PostReport/> : <Input type="password"  onChange={handleChangeAuthor} value={token} /> }<br/>
+        { check == 'yes' ? <p></p>:  <Button onClick={handleClick}>enter </Button> }<br/>
         { check == 'no' && <Error>wrong token</Error> }
-
-
-
     </div>
   );
 }

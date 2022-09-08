@@ -37,9 +37,12 @@ const [error, setError] = useState({})
             <ReportContainer>
                 <ReportHeader>{comment.day}, {comment.date}</ReportHeader>
                <ReportBody>
-               <pre>
+               <br/>
                 {comment.content}
-                </pre><br/><br/>homeoffice: <b>{comment.homeoffice}</b></ReportBody>
+                <br/>
+                <br/>
+                homeoffice: <b>{comment.homeoffice}</b>
+                </ReportBody>
             </ReportContainer>
          ))}
     </div>

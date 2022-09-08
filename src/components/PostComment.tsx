@@ -73,7 +73,7 @@ const handleChangeAuthor = (event: React.ChangeEvent<HTMLInputElement>) => {
         <img style={{margin:"10px", cursor: "pointer"}} onClick={(event) => test(stranger,'stranger')}src={stranger} width="50px" height="50px"/>
       </div>
 
-        name: <Input type="text" maxLength={15} onChange={handleChangeAuthor} value={author} /> @{avatarName}<img src={avatar} width="30px" height="30px"/><br/>
+        name: <br/><Input type="text" maxLength={15} onChange={handleChangeAuthor} value={author} /> @{avatarName}<img src={avatar} width="30px" height="30px"/><br/>
         comment:<br/><br/> <TextBox maxLength={600}  onChange={handleChangeComment} value={comment} ></TextBox><br/>
         { errorComment == '' ? <p></p> : <Error>{errorComment}</Error>}
         { errorAuthor == '' ? <p></p> : <Error>{errorAuthor}</Error>  }

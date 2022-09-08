@@ -10,6 +10,13 @@ const Page = styled.div`
  letter-spacing: 2px;
 `
 
+
+const FooterPage = styled.div`
+ width: 100%;
+padding-top: 100px;
+`
+
+
 const Icon = styled.span`
   padding: 10px;
   margin: 10px;
@@ -40,4 +47,4 @@ letter-spacing: 50px;
 line-height: 3;
 `
 
-export { Page, Icon, Header, Quest};
+export { Page, Icon, Header, Quest, FooterPage};

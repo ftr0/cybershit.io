@@ -6,10 +6,7 @@ function App() {
 
   return (
     <div>
-      <br/><br/>
-      <IconDefinitionTable/>
-      <ListComments />   
-      <PostComment />  
+     <h2>Cheats Sheets</h2>
     </div>
   );
 }

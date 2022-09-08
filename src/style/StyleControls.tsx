@@ -27,9 +27,9 @@ cursor: pointer;
   font-size: 20px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     margin: 0px;
-    border-radius: 0px;
+  
     margin-bottom:40px;
     margin-top:40px;
   }
@@ -47,9 +47,9 @@ const Input = styled.input`
   font-size: 20px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
-    width: 90%;
+    width: 80%;
     margin: 0px;
-    border-radius: 0px;
+  
     border: none;
     margin-bottom:40px;
     margin-top:20px;
@@ -90,9 +90,8 @@ const TextBox = styled.textarea`
   margin-left: 20%;
   margin-right: 20%;
   @media (max-width: 768px) {
-    width: 90%;
+    width: 80%;
     margin: 0px;
-    border-radius: 0px;
     border: none;
     padding: 5%;
   }
