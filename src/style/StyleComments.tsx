@@ -33,8 +33,25 @@ const CommentBox = styled.div`
 `
 
 
+const Table = styled.table`
+  font-size: 20px;
+  background: lightblue;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: black;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 40px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+    margin-bottom:40px;
+    border: none;
+  }
+`
 
 
 
-
-export {     CommentBox,       CommentHeader, CommentBody };
+export {  Table,   CommentBox,       CommentHeader, CommentBody };

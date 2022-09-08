@@ -1,8 +1,10 @@
 import React, { useState} from 'react';
 import { Button,  TextBox, Error, Input} from "../style/StyleControls"
-import { Quest } from "../style/stylePage"
 import PostReport from ".//PostReport"
 const PostComment = () => {
+
+
+
 
     const [token, setToken] = useState("");
     const [check, setCheck] = useState("");
@@ -10,43 +12,48 @@ const PostComment = () => {
 
     function handleClick() {
 
-        fetch('https://www.cybershit.io/api/secToken.php?info='+token, {  
-          method: 'POST', 
-          mode: 'cors', 
+      let click2 = new Audio("https://cybershit.io/sounds/click2.mp3")
+      click2.play();
+
+        fetch('https://www.cybershit.io/api/secToken.php?info='+token, {
+          method: 'POST',
+          mode: 'cors',
         })
         .then(response => response.text())
-   .then((response) => {
+        .then((response) => {
        console.log(response)
        setCheck(response.replace(/["]/gi, ''))
+
+
    })
+
+
+
+   if (check == "yes")
+   {
+
+   }
       }
 
 
       const handleChangeAuthor = (event: React.ChangeEvent<HTMLInputElement>) => {
         setToken(event.target.value);
+        let audioClick1 = new Audio("https://cybershit.io/sounds/click1.mp3")
+        audioClick1.play();
       };
-    
+
 
   return (
     <div>
-        <Quest>
-            <br/>
-            fdwqwfdwqw<br/>
-            wdasdfdwqw<br/>
-            daqfdwqwqe<br/>
-            eqefdwqwqw<br/>
-            eqefdwqwqw<br/>
-            eqefdwqwqw<br/>
-            eqefdwqwqw<br/>
-            eqefdwqwqw<br/>
-            eqefdwqwqw<br/>
-        </Quest>
-        <br/><br/><br/>
-        token: <br/><Input type="password"  onChange={handleChangeAuthor} value={token} /> <br/><br/>
-        <Button onClick={handleClick}>enter </Button><br/><br/>
-        { check == 'yes' ? <PostReport/> : <p></p>} 
-       {check}
-     
+
+
+
+        { check == 'yes' ? <PostReport/> : <Input type="password"  onChange={handleChangeAuthor} value={token} /> }
+        { check == 'yes' ? <p></p>:  <Button onClick={handleClick}>enter </Button> }
+        { check == 'no' && <Error>wrong token</Error> }
+
+
+
     </div>
   );
 }

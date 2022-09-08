@@ -2,6 +2,7 @@ import { Button, Input, TextBox,  Option, Select} from "../style/StyleControls"
 
 const PostEmail = () => {
 
+
   return (
     <div>
         <h2>email contact</h2>
@@ -14,7 +15,7 @@ const PostEmail = () => {
           </Select>
         <br/><br/>
         message: <br/><br/><TextBox maxLength={600}   ></TextBox><br/>
-       
+
         <Button> send email</Button>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ReportContainer,ReportHeader,ReportBody } from "../style/StyleReports"
 
 type Report = {
+  day: string;
   content: string;
   date: string;
   homeoffice: string;
@@ -19,25 +20,28 @@ const [error, setError] = useState({})
       console.log(error);
   }
 
- 
+
   useEffect(() => {
-    getPosts()    
+    getPosts()
     const interval=setInterval(()=>{
       getPosts()
      },5000)
      return()=>clearInterval(interval)
   }, [])
-  
+
 
 
   return (
     <div>
-        {reports.map(comment => ( 
+        {reports.map(comment => (
             <ReportContainer>
-                <ReportHeader>{comment.date}</ReportHeader> 
-                <ReportBody>{comment.content} <br/><br/>homeoffice: <b>{comment.homeoffice}</b></ReportBody>
-            </ReportContainer>   
-         ))}  
+                <ReportHeader>{comment.day}, {comment.date}</ReportHeader>
+               <ReportBody>
+               <pre>
+                {comment.content}
+                </pre><br/><br/>homeoffice: <b>{comment.homeoffice}</b></ReportBody>
+            </ReportContainer>
+         ))}
     </div>
   );
 }

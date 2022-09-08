@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CommentBody, CommentBox, CommentHeader} from "../style/StyleComments"
+import { CommentBody, CommentBox, CommentHeader, Table} from "../style/StyleComments"
 
 let anakin = "https://www.cybershit.io/api/thumbs/thumb_anakinskywalker.jpg";
 let sebulba = "https://www.cybershit.io/api/thumbs/thumb_sebulba.jpg";
@@ -21,11 +21,11 @@ const [error, setError] = useState({})
     .then(res => setComments(res))
     .catch(err => setError(err))
       console.log(error);
-    
+
   }
 
   useEffect(() => {
-    getPosts()    
+    getPosts()
     const interval=setInterval(()=>{
       getPosts()
      },5000)
@@ -37,51 +37,51 @@ const [error, setError] = useState({})
   return (
     <div>
 
-        
 
 
 
-{comments.map(comment => ( 
-  <table style={{width:"60%", marginLeft: "20%", marginRight:"20%", marginBottom:"40px"}}>
+
+{comments.map(comment => (
+  <Table>
 
 <tr style={{backgroundColor:"lightblue"}}>
   <td style={{width:"30%", padding: "50px", backgroundColor:"#283b59"}}>
- 
-    
+
+
               <img src={comment.avatar} width="50%" /><br/><br/>
               {comment.author}
-          
+
   </td>
   <td style={{width:"70%", padding: "50px", backgroundColor:"#423b59"}}>
-  <b>{new Intl.DateTimeFormat('en-GB', { 
-                  month: 'long', 
+  <b>{new Intl.DateTimeFormat('en-GB', {
+                  month: 'long',
                   day: '2-digit',
                   //year: 'numeric',
                   hour: '2-digit',
                   minute: '2-digit',
                   //second: '2-digit',
               }).format(new Date(comment.date))}</b><br/><br/>
-          <pre>{comment.comment
+          {comment.comment
                       .replace(':-)', '😜')
                       .replace(':-(', '😒')
                       .replace(':_(', '😂')
                       .replace('*engel*', '😂')
 
-         }</pre>
-       
+         }
+
   </td>
 </tr>
-</table>
+</Table>
 
-   ))}  
-   
+   ))}
 
 
-        
-              
-              
-    
-      
+
+
+
+
+
+
     </div>
   );
 }

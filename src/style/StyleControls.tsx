@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Link = styled.a`
+cursor: pointer;
 letter-spacing: 7px;
  padding:10px;
  margin:10px;
@@ -18,6 +19,7 @@ letter-spacing: 7px;
 }
 `
 const Button = styled.button`
+cursor: pointer;
   background: #964d95;
   border-radius: 20px;
   padding: 20px;
@@ -114,7 +116,7 @@ const MenuButton = styled.button`
   color: black;
   padding: 20px;
   margin: 30px;
-  
+
 `
 
 export { Button, Input, TextBox, Error, MenuButton, Option, Select, Link };

@@ -16,16 +16,10 @@ import React, { useState} from 'react';
 
 const App = () => {
 
-  const [site, setSite] = useState("");
-
-
-  function siteHome() { setSite("home") }
-  function siteComments() { setSite("comments") }
-
+ 
   return (
     <div>
       <div>
-      { site == 'home' ? <PageComments /> : <p></p>} 
 
         
       </div>
