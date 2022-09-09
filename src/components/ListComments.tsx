@@ -33,7 +33,9 @@ const [error, setError] = useState({})
 
   return (
     <div>
+      <h2>comments</h2>
 {comments.map(comment => (
+  <>
   <Table>
 
 <tr style={{backgroundColor:"lightblue"}}>
@@ -62,7 +64,7 @@ const [error, setError] = useState({})
   </td>
 </tr>
 </Table>
-
+</>
    ))}
 
     </div>

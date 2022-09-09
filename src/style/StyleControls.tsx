@@ -10,10 +10,11 @@ letter-spacing: 7px;
  &:hover{
   -webkit-transition: all .6s ease;
   opacity: 0.7;
+  
 }
 @media (max-width: 768px) {
-  font-size: 25px;
-  float: left;
+  font-size: 40px;
+ 
   text-align: center;
 }
 `

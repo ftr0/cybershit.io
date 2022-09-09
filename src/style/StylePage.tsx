@@ -35,12 +35,13 @@ height: 60px;
   font-size: 10px;
   letter-spacing: 16px;
   width: 100%;
-  padding-top: 0px;
+
+  text-align: centerM
 }
 `
 const Quest = styled.span`
 text-align: center;
-font-size: 20px;
+font-size: 30px;
 color: white;
 letter-spacing: 50px;
 line-height: 3;
