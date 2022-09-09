@@ -1,21 +1,22 @@
 import styled from 'styled-components';
 
-const Link = styled.a`
+const Link = styled.span`
+font-size: 30px;
 cursor: pointer;
 letter-spacing: 7px;
- padding:10px;
+ 
  margin:10px;
- background-color: #471c46;
+
  color: white;
  text-decoration: none;
  &:hover{
-  color: palevioletred;
-  background-color: yellow;
+  -webkit-transition: all .6s ease;
+  opacity: 0.7;
 }
 @media (max-width: 768px) {
-  width: 39%;
+  font-size: 25px;
   float: left;
-
+  text-align: center;
 }
 `
 const Button = styled.button`

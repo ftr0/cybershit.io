@@ -1,10 +1,10 @@
 import PageHome from './pages/PageHome';
 import PageComments from './pages/PageComments';
-import PageEmail from './pages/PageEmail';
+import PageContact from './pages/PageContact';
 import PageReports from './pages/PageReports';
 import Login from './components/Login';
 import Footer from './components/Footer';
-import PageCheatSheets from './pages/PageCheatSheets';
+import PageCode from './pages/PageCode';
 
 
 import FadeIn from 'react-fade-in';
@@ -21,28 +21,28 @@ const App = () => {
 
   function siteHome() { setSite("home");click.play(); }
   function siteComments() { setSite("comments");click.play(); }
-  function siteEmail() { setSite("email");click.play(); }
+  function siteContact() { setSite("contact");click.play(); }
   function siteReports() { setSite("reports");click.play(); }
   function siteAdmin() { setSite("admin");click.play(); }
-  function siteCheatSheets() { setSite("cheatsheets");click.play(); }
+  function siteCode() { setSite("code");click.play(); }
 
   return (
     <Page  >
     <Header>
-      <Link  onClick={siteHome}> home</Link>
-      <Link  onClick={siteComments}> comments</Link>
-      <Link  onClick={siteEmail}> email</Link>
-      <Link  onClick={siteReports}> reports</Link>
-      <Link  onClick={siteAdmin}> admin</Link>
-      <Link  onClick={siteCheatSheets}> cheatsheets</Link>
+      <Link  onClick={siteHome}>🏠</Link>
+      <Link  onClick={siteCode}>📁</Link>
+      <Link  onClick={siteComments}>💬</Link>
+      <Link  onClick={siteReports}>📖</Link>
+      <Link  onClick={siteContact}>📧</Link>
+      <Link  onClick={siteAdmin}>⚙️</Link>
     </Header>
       <FadeIn>
         { site==='home' && <PageHome /> }
         { site==='comments' && <PageComments /> }
-        { site==='email' && <PageEmail /> }
+        { site==='contact' && <PageContact /> }
         { site==='reports' && <PageReports /> }
         { site==='admin' && <Login /> }
-        { site==='cheatsheets' && <PageCheatSheets /> }
+        { site==='code' && <PageCode /> }
       </FadeIn>
       <Footer/>
     </Page>

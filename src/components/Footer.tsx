@@ -9,7 +9,7 @@ function App() {
   return (
 
          <FooterPage>
-          <Link href="https://github.com/ftr0/cybershit.io" target="_blank">view source on github</Link>
+          <a href="https://github.com/ftr0/cybershit.io" target="_blank">view source on github</a>
           </FooterPage>
 
   );

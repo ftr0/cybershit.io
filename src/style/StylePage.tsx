@@ -35,12 +35,12 @@ font-size: 20px;
 color: white;
 letter-spacing: 25px;
 padding-top: 20px;
-height: 50px;
+height: 60px;
 @media (max-width: 768px) {
   font-size: 10px;
   letter-spacing: 16px;
   width: 100%;
-  height: 150px;
+
   padding-top: 0px;
 }
 `
@@ -52,4 +52,16 @@ letter-spacing: 50px;
 line-height: 3;
 `
 
-export { Page, Icon, Header, Quest, FooterPage};
+const CodeArea = styled.div`
+text-align: left;
+font-size: 14px;
+background-color: #3c3d3c;
+margin-left: 15%;
+margin-right: 15%;
+padding: 50px;
+letter-spacing: 0px;
+line-height: 2;
+color: white;
+`
+
+export { Page, Icon, Header, Quest, FooterPage, CodeArea};
