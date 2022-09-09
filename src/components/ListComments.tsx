@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CommentBody, CommentBox, CommentHeader, Table} from "../style/StyleComments"
 
-let anakin = "https://www.cybershit.io/api/thumbs/thumb_anakinskywalker.jpg";
-let sebulba = "https://www.cybershit.io/api/thumbs/thumb_sebulba.jpg";
-
 type Comment = {
   date: Date;
   author: string;
@@ -36,11 +33,6 @@ const [error, setError] = useState({})
 
   return (
     <div>
-
-
-
-
-
 {comments.map(comment => (
   <Table>
 
@@ -66,21 +58,12 @@ const [error, setError] = useState({})
                       .replace(':-(', '😒')
                       .replace(':_(', '😂')
                       .replace('*engel*', '😂')
-
          }
-
   </td>
 </tr>
 </Table>
 
    ))}
-
-
-
-
-
-
-
 
     </div>
   );

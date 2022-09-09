@@ -8,11 +8,6 @@ const Page = styled.div`
  font-size: 20px;
  padding-bottom:50px;
  letter-spacing: 2px;
- background-image: url("https://cybershit.io/images/back2.svg");
-height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 `
 
 
@@ -40,7 +35,6 @@ height: 60px;
   font-size: 10px;
   letter-spacing: 16px;
   width: 100%;
-
   padding-top: 0px;
 }
 `

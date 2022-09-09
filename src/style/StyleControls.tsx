@@ -4,9 +4,7 @@ const Link = styled.span`
 font-size: 30px;
 cursor: pointer;
 letter-spacing: 7px;
- 
  margin:10px;
-
  color: white;
  text-decoration: none;
  &:hover{
@@ -50,7 +48,6 @@ const Input = styled.input`
   @media (max-width: 768px) {
     width: 80%;
     margin: 0px;
-  
     border: none;
     margin-bottom:40px;
     margin-top:20px;
@@ -66,6 +63,26 @@ const Select = styled.select`
   text-align: center;
   font-size: 20px;
   letter-spacing: 1px;
+`
+
+const BadgeBox = styled.div`
+  padding: 5px;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  font-size: 10px;s
+  width: 70%;
+`
+
+const Badge = styled.div`
+  float: left;
+  background: #202733;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  font-size: 10px;
+  width: 100px;
 `
 
 const Option = styled.option`
@@ -119,4 +136,4 @@ const MenuButton = styled.button`
 
 `
 
-export { Button, Input, TextBox, Error, MenuButton, Option, Select, Link };
+export { Button, Input, TextBox, Error, MenuButton, Option, Select, Link,Badge, BadgeBox };

@@ -52,12 +52,8 @@ const handleChangeRating = (event: React.ChangeEvent<HTMLSelectElement>) => {
   audioClick1.play();
 };
 
-
-
   return (
     <div>
-
-
         date: <Input type="date" maxLength={15} onChange={handleChangeDate} value={date} /> <br/>
         content:<br/><br/> <TextBox maxLength={600}  onChange={handleChangeContent} value={content} ></TextBox><br/>
 
@@ -65,16 +61,11 @@ const handleChangeRating = (event: React.ChangeEvent<HTMLSelectElement>) => {
                   <Option value="yes">yes</Option>
                   <Option value="no">no</Option>
          </Select>
-
-
-
-
          krank: <Select  name="krank" id="rating" onChange={handleChangeKrank}>
                   <option value="no">no</option>
                   <option value="yes">yes</option>
 
                 </Select>
-
          rating: <Select  name="rating" id="rating" onChange={handleChangeRating}>
                   <option value="5">5</option>
                   <option value="4">4</option>
