@@ -48,9 +48,12 @@ line-height: 3;
 `
 
 const CodeArea = styled.div`
+background: #191421;
+color: white;
+border: 1px solid black;
+border-radius: 10px;
 text-align: left;
 font-size: 14px;
-background-color: #3c3d3c;
 margin-left: 15%;
 margin-right: 15%;
 padding: 50px;

@@ -20,10 +20,13 @@ letter-spacing: 7px;
 `
 const Button = styled.button`
 cursor: pointer;
-  background: #964d95;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 30px;
+
+background: #191421;
+color: white;
+  border-radius: 10px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  margin: 10px;
   font-size: 20px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
@@ -39,8 +42,9 @@ cursor: pointer;
 `
 
 const Input = styled.input`
-  background: lightblue;
-  border-radius: 20px;
+  background: #191421;
+  color: white;
+  border-radius: 10px;
   padding: 20px;
   margin: 20px;
   text-align: center;
@@ -57,13 +61,16 @@ const Input = styled.input`
 `
 
 const Select = styled.select`
-  background: lightblue;
-  border-radius: 20px;
-  padding: 20px;
+width: 200px;
+background: #191421;
+color: white;
+  border-radius: 10px;
+  padding: 10px;
   margin: 20px;
   text-align: center;
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border: 1px solid black;
 `
 
 const BadgeBox = styled.div`
@@ -79,6 +86,7 @@ const Badge = styled.div`
   float: left;
   background: #202733;
   border-radius: 5px;
+  border: 1px solid black;
   padding: 5px;
   margin: 5px;
   text-align: center;
@@ -87,7 +95,6 @@ const Badge = styled.div`
 `
 
 const Option = styled.option`
-  background: lightblue;
   border-radius: 20px;
   padding: 20px;
   margin: 20px;
@@ -97,7 +104,8 @@ const Option = styled.option`
 `
 
 const TextBox = styled.textarea`
-  background: lightblue;
+background: #191421;
+color: white;
   border-radius: 20px;
   text-align: center;
   padding: 20px;
@@ -123,8 +131,10 @@ font-size: 20px;
   border: none;
   color: black;
   padding: 20px;
-  margin-left: 40%;
-  width: 20%;
+  margin-top: 60px;
+  margin-left: 25%;
+  margin-left: 25%;
+  width: 50%;
 `
 
 const MenuButton = styled.button`

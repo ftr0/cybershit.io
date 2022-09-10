@@ -1,5 +1,5 @@
 
-import { Option, Select} from "../style/StyleControls"
+import { Option, Select, Button} from "../style/StyleControls"
 import { CodeArea } from "../style/StylePage"
 import React, { useState, useEffect } from 'react';
 import { Badge, BadgeBox } from "../style/StyleControls"
@@ -9,7 +9,7 @@ type Code = {
   content: string;
 }
 
-const PageCode = () => {
+const PageCode  = () => {
   const [StatusCodeJava, setStatusCodeJava] = useState<string>("loading...")
   const [StatusCodeReact, setStatusCodeReact] = useState<string>("loading...")
   const [StatusCodeSpring, setStatusCodeSpring] = useState<string>("loading...")
@@ -39,24 +39,39 @@ const PageCode = () => {
     setSource(event.target.value);
   };
 
+ let content = "heftig";
+
+const downloadFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob([content], {
+      type: "text/plain"
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "test.txt";
+    document.body.appendChild(element);
+    element.click();
+  };
 
   return (
     <div>
       <h2>Coding Cheats Sheets</h2>
-      <Select onChange={handleChange}><Option>{StatusCodeJava}</Option>{codeJavaList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-      <Select onChange={handleChange}><Option>{StatusCodeReact}</Option>{codeSpringList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-      <Select onChange={handleChange}><Option>{StatusCodeSpring}</Option>{codeReactList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-      <Select onChange={handleChange}><Option>{StatusCodeOther}</Option>{codeOtherList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-      <br/>
-      <CodeArea><pre>{source}</pre> </CodeArea>
+        <Select onChange={handleChange}><Option>{StatusCodeJava}</Option>{codeJavaList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
+        <Select onChange={handleChange}><Option>{StatusCodeSpring}</Option>{codeSpringList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
+        <Select onChange={handleChange}><Option>{StatusCodeReact}</Option>{codeReactList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
+        <Select onChange={handleChange}><Option>{StatusCodeOther}</Option>{codeOtherList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
+        download:
+        <Button onClick={downloadFile}>file</Button>
+        <Button onClick={downloadFile}>pdf</Button>
+        <br/>
+        <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
 
-      <BadgeBox>
-        {codeJavaList.map(code => (<Badge>{code.filename}</Badge>))}
-        {codeReactList.map(code => (<Badge>{code.filename}</Badge>))}
-        {codeSpringList.map(code => (<Badge>{code.filename}</Badge>))}
-        {codeOtherList.map(code => (<Badge>{code.filename}</Badge>))}
-      </BadgeBox>
-    </div>
+        <BadgeBox>
+          {codeJavaList.map(code => (<Badge>{code.filename}</Badge>))}
+          {codeReactList.map(code => (<Badge>{code.filename}</Badge>))}
+          {codeSpringList.map(code => (<Badge>{code.filename}</Badge>))}
+          {codeOtherList.map(code => (<Badge>{code.filename}</Badge>))}
+        </BadgeBox>
+      </div>
   );
 }
 
