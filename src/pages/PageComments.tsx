@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table} from "../style/StyleComments"
+import { Table, Column1, Column2, Column3, Column4,CommentLine} from "../style/StyleComments"
 
 type Comment = {
   date: Date;
@@ -9,10 +9,13 @@ type Comment = {
 }
 
 const ListComments = () => {
+
 const [comments, setComments] = useState<Comment[]>([])
 const [error, setError] = useState({})
+let uhr = "https://cdn.pixabay.com/photo/2014/04/02/14/05/clock-306096_960_720.png";
 
-  function getPosts() {
+
+function getPosts() {
     fetch('https://www.cybershit.io/api/service.php?info=comments')
     .then(response => response.json())
     .then(res => setComments(res))
@@ -33,35 +36,31 @@ const [error, setError] = useState({})
       <h2>comments</h2>
       <Table>
         {comments.map(comment => (
-          <>
+          <div style={{backgroundColor:"#191421", marginBottom:"10px", border: "1px solid black", borderRadius:"10px"}}>
             <tr>
-              <td style={{width:"5%", padding: "10px", backgroundColor:"#283b59"}}>
-                <img src={comment.avatar} width="100%" />
-              </td>
-              <td style={{width:"10%", padding: "10px", backgroundColor:"#283b59"}}>
-                {comment.author}
-              </td>
-              
-              <td style={{width:"80%", padding: "20px", backgroundColor:"#423b59"}}>
-                  {comment.comment
-                              .replace(':-)', '😜')
-                              .replace(':-(', '😒')
-                              .replace(':_(', '😂')
-                              .replace('*engel*', '😂')
+              <Column1><img src={comment.avatar} width="100%"/></Column1>
+              <Column2>{comment.author}: </Column2>
+              <Column3>
+                {comment.comment
+                    .replace(':-)', '😜')
+                    .replace(':-(', '😒')
+                    .replace(':_(', '😂')
+                    .replace('*engel*', '😂')
                 }
-              </td>
-              <td style={{width:"4%", padding: "10px", backgroundColor:"#283b59"}}>
-              <img src="https://cdn.pixabay.com/photo/2013/07/12/16/33/clock-hands-151141_960_720.png" width="100%" title={new Intl.DateTimeFormat('en-GB', {
-                          month: 'long',
-                          day: '2-digit',
-                          //year: 'numeric',
-                          hour: '2-digit',
-                          minute: '2-digit',
-                          //second: '2-digit',
-                      }).format(new Date(comment.date))} />
-              </td>
+              </Column3>
+              <Column4>
+              <img src={uhr} width="100%" title={new Intl.DateTimeFormat('en-GB', {
+                    month: 'long',
+                    day: '2-digit',
+                    //year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    //second: '2-digit',
+                }).format(new Date(comment.date))} />
+              </Column4>
             </tr>
-          </>
+          <br/>
+          </div>
           ))}
           </Table>
     </div>

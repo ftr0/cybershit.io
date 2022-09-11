@@ -60,9 +60,9 @@ const downloadFile = () => {
         <Select onChange={handleChange}><Option>{StatusCodeSpring}</Option>{codeSpringList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeReact}</Option>{codeReactList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeOther}</Option>{codeOtherList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-        download:
-        <Button onClick={downloadFile}>file</Button>
-        <Button onClick={downloadFile}>pdf</Button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Button onClick={downloadFile}>download as file</Button>
+        <Button onClick={downloadFile}>download as pdf</Button>
         <br/>
         <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
 

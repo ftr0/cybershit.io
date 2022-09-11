@@ -1,5 +1,6 @@
 import ReactApexChart from "react-apexcharts";
 import {useState, useEffect} from 'react'
+import { AnyMxRecord } from "dns";
 
 type RadarInfos = {
   java: any;
@@ -10,10 +11,12 @@ type RadarInfos = {
   linux: any;
 }
 
+
 const Radar = () => {
   const [id, setId] = useState<RadarInfos[]>([])
   const [error, setError] = useState({})
 
+ 
 
   useEffect(() => {
     fetch('https://cybershit.io/api/displayRadar.php')
@@ -25,6 +28,7 @@ const Radar = () => {
 
 
   var temp = id.at(0);
+
   var java = temp?.java;
   var spring = temp?.spring;
   var react = temp?.react;
@@ -36,19 +40,20 @@ const Radar = () => {
   const config = {
     options: {
       chart: { toolbar: { show: false }  },
-      colors: ["white"],
-      labels: [ "Java", "Spring", "React", "php", "git", "linux", "other"  ],
+      labels: [ "Java", "Spring", "React", "php", "linux" ],
       stroke: { width: 3 },
-      fill: { opacity: 0.6 },
-      markers: { size: 5 },
+      fill: { opacity: 0.5 },
+      markers: {
+        size: 0
+    },
       tooltips: false,
     }
   };
 
   return (
-    <>
-    <ReactApexChart options={config.options} series={[ { data: [ java, spring, react, php, git, linux, other] } ]} type="radar" />
-    </>
+ 
+    <ReactApexChart options={config.options} series={[ { data: [ java, spring, react, php, linux] } ]} type="radar" />
+
   );
 };
 

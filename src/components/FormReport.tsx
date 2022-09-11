@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { Button,  TextBox, Error, Input, Option, Select} from "../style/StyleControls"
+import { Button,  TextBox, Input, Option, Select} from "../style/StyleControls"
 
 const PostComment = () => {
 

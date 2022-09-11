@@ -24,19 +24,38 @@ letter-spacing: 1px;
   width: 80%;
   margin: 0px;
   margin-bottom:40px;
-  margin-top:40px;
+  margin-top:0px;
 }
 &:hover{
     color: palevioletred;
 }
 `
 
-const Input = styled.input`
+const ButtonSend = styled.button`
+border: 1px solid black;
   background: #191421;
   color: white;
   border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom:40px;
+    margin-top:0px;
+  
+  }
+`
+
+const Input = styled.input`
+border: 1px solid black;
+color:grey;
+background: #202733;
+border-radius: 5px;
+border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
   text-align: center;
   letter-spacing: 1px;
   @media (max-width: 768px) {
@@ -52,15 +71,17 @@ const Input = styled.input`
 
 
 const InputChat = styled.input`
-width: 40%;
-  background: #191421;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
+width: 50%;
+color:grey;
+background: #202733;
+border-radius: 10px;
+border: 1px solid black;
+
+  padding: 10px;
+  margin: 10px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
     margin: 0px;
     border: none;
     margin-bottom:40px;
@@ -72,15 +93,14 @@ width: 40%;
 
 
 const Select = styled.select`
-color:grey;
-background: #202733;
-border-radius: 5px;
-border: 1px solid black;
-padding: 5px;
-margin: 5px;
-text-align: center;
-
-width: 100px;
+  color:grey;
+  background: #202733;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 100px;
 `
 
 const Badge = styled.button`
@@ -92,29 +112,26 @@ const Badge = styled.button`
   padding: 5px;
   margin: 5px;
   text-align: center;
-
-  width: 100px;
+  width: 120px;
 `
 
 const Option = styled.option`
-color:grey;
-background: #202733;
-border-radius: 5px;
-border: 1px solid black;
-padding: 5px;
-margin: 5px;
-text-align: center;
-
-width: 100px;
+  color:grey;
+  background: #202733;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 100px;
 `
 
 const TextBox = styled.textarea`
-background: #191421;
-color: white;
-border-radius: 20px;
-text-align: center;
-padding: 20px;
-
+  background: #191421;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
   letter-spacing: 1px;
   height: 150px;
   resize: none;
@@ -122,14 +139,13 @@ padding: 20px;
   margin-left: 20%;
   margin-right: 20%;
   @media (max-width: 768px) {
-    width: 80%;
-    margin: 0px;
-    border: none;
-    padding: 5%;
+  width: 80%;
+  margin: 0px;
+  border: none;
+  padding: 5%;
   }
 `
 const Error = styled.div`
-
   background: red;
   border-radius: 20px;
   border: none;
@@ -142,4 +158,4 @@ const Error = styled.div`
 `
 
 
-export { Button, Input, TextBox, Error, Option, Select, Link,Badge,InputChat };
+export { Button, Input, TextBox, Error, Option, Select, Link,Badge,InputChat,ButtonSend };
