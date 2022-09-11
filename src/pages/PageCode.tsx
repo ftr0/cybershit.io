@@ -2,8 +2,8 @@
 import { Option, Select, Button} from "../style/StyleControls"
 import { CodeArea } from "../style/StylePage"
 import React, { useState, useEffect } from 'react';
-import { Badge, BadgeBox } from "../style/StyleControls"
-
+import { Badge } from "../style/StyleControls"
+import { BadgeBox } from "../style/StylePage"
 type Code = {
   filename: string;
   content: string;
@@ -55,6 +55,7 @@ const downloadFile = () => {
   return (
     <div>
       <h2>Coding Cheats Sheets</h2>
+      
         <Select onChange={handleChange}><Option>{StatusCodeJava}</Option>{codeJavaList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeSpring}</Option>{codeSpringList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeReact}</Option>{codeReactList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
@@ -66,10 +67,10 @@ const downloadFile = () => {
         <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
 
         <BadgeBox>
-          {codeJavaList.map(code => (<Badge>{code.filename}</Badge>))}
-          {codeReactList.map(code => (<Badge>{code.filename}</Badge>))}
-          {codeSpringList.map(code => (<Badge>{code.filename}</Badge>))}
-          {codeOtherList.map(code => (<Badge>{code.filename}</Badge>))}
+          {codeJavaList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
+          {codeReactList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
+          {codeSpringList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
+          {codeOtherList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
         </BadgeBox>
       </div>
   );

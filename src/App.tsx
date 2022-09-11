@@ -3,9 +3,11 @@ import Login from './pages/PageAdmin';
 import PageCode from './pages/PageCode';
 import FadeIn from 'react-fade-in';
 import { Link } from "./style/StyleControls"
-import { Page, Header, FooterPage } from "./style/StylePage"
-import ListComments from "./components/ListComments"
+import { Page, HeaderPage, FooterPage } from "./style/StylePage"
+import ListComments from "./pages/PageComments"
 import FormComment from './components/FormComment';
+import Chart from './components/chart';
+
 
 const App = () => {
   let click = new Audio("https://cybershit.io/sounds/click1.mp3")
@@ -19,18 +21,22 @@ const App = () => {
   
   return (
     <Page>
-      <Header>
-        <Link  onClick={siteHome}>🏠</Link>
-        <Link  onClick={siteCode}>📁</Link>
-        <Link  onClick={siteComments}>💬</Link>
-        <Link  onClick={siteAdmin}>⚙️</Link>
-      </Header>
+      <HeaderPage>
+        <Link onClick={siteHome}>🏠</Link>
+        <Link onClick={siteCode}>📁</Link>
+        <Link onClick={siteComments}>💬</Link>
+        <Link onClick={siteAdmin}>⚙️</Link>
+      </HeaderPage>
 
       <FadeIn>
-        { site === 'home' &&  <h1 style={{fontSize:"20px",padding: "20px", backgroundColor: "", letterSpacing:"20px"}}>cybershit.io</h1>}
+        { site === 'home' &&  <h2>cybershit.io</h2>}
         { site === 'home' &&  <img src="https://cybershit.io/images/logo.svg" width="20%"/>}
         { site === 'home' &&  <p>coding cheat sheets</p>}
         { site === 'home' &&  <p>„best friend of Anwendungsentwickler“</p>}
+        { site === 'home' &&  <br/>}
+        { site === 'home' &&  <br/>}
+        { site === 'home' &&  <h2>available code</h2>}
+        <div style={{width:"50%", marginLeft:"25%",marginRight:"25%"}}>{ site === 'home' &&  <Chart/>}</div>
         { site === 'comments' &&  <ListComments />}
         { site === 'comments' &&  <FormComment />}
         { site === 'admin' && <Login /> }
