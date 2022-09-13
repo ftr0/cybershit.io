@@ -7,9 +7,7 @@ import { Page, HeaderPage, FooterPage } from "./style/StylePage"
 import ListComments from "./pages/PageComments"
 import FormComment from './components/FormComment';
 import PageHome from './pages/PageHome';
-import './style/animation.css';
-
-
+import './style/animation.scss';
 const App = () => {
   let click = new Audio("https://cybershit.io/sounds/click1.mp3")
 
@@ -18,13 +16,12 @@ const App = () => {
   function siteHome() { setSite("home");click.play(); }
   function siteCode() { setSite("code");click.play(); }
   function siteComments() { setSite("comments");click.play(); }
-  function siteAdmin() { setSite("admin");click.play(); }
   
   return (
     <Page>
 
 <div className="area" >
-            <ul className="circles">
+            <ul className="items">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -43,7 +40,6 @@ const App = () => {
         <Link onClick={siteHome}>🏠</Link>
         <Link onClick={siteCode}>📁</Link>
         <Link onClick={siteComments}>💬</Link>
-        <Link onClick={siteAdmin}>⚙️</Link>
       </HeaderPage>
 
       <FadeIn>

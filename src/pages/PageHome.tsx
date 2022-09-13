@@ -25,7 +25,7 @@ const PostComment = () => {
         <br/>
         <br/>
         <br/>
-        <h2>available code</h2>
+        <h2>what you can find here?¿?¿?</h2>
         <ChartDiv><Chart/></ChartDiv>
     </div>
   );

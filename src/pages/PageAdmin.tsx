@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { Button,  TextBox, Error, Input} from "../style/StyleControls"
+import { ButtonSend,  TextBox, Error, Input} from "../style/StyleControls"
 import FormReport from "../components/FormReport"
 const PostComment = () => {
     const [token, setToken] = useState("");
@@ -35,7 +35,7 @@ const PostComment = () => {
 
         { check == 'yes' ? <p></p> : <p>enter token:</p> }<br/>
         { check == 'yes' ? <FormReport/> : <Input type="password"  onChange={handleChangeAuthor} value={token} /> }<br/>
-        { check == 'yes' ? <p></p>:  <Button onClick={handleClick}>enter </Button> }<br/>
+        { check == 'yes' ? <p></p>:  <ButtonSend onClick={handleClick}>enter </ButtonSend> }<br/>
         { check == 'no' && <Error>wrong token</Error> }
     </div>
   );
