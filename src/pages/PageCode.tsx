@@ -21,7 +21,12 @@ const PageCode  = () => {
   const [source, setSource] = useState("choose code from dropdown menu");
 
 
+
+
+
+
   useEffect(() => {
+   
     fetch('https://www.cybershit.io/api/service.php?info=codeJava').then(response => response.json()).then(res => setCodeJavaList(res)).then(() => setStatusCodeJava("java code"));
     fetch('https://www.cybershit.io/api/service.php?info=codeReact').then(response => response.json()).then(res => setCodeReactList(res)).then(() => setStatusCodeReact("react code"));
     fetch('https://www.cybershit.io/api/service.php?info=codeSpring').then(response => response.json()).then(res => setCodeSpringList(res)).then(() => setStatusCodeSpring("spring boot code"));

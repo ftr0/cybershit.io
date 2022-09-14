@@ -29,12 +29,12 @@ const Radar = () => {
   var php = temp?.php;
   var css = temp?.css;
   var linux = 2;
-  var other = 0;
+  var other = 7;
 
   const config = {
     options: {
       chart: { toolbar: { show: false }  },
-      labels: [ "Java", "Spring", "React", "php", "css", "linux" ],
+      labels: [ "Java", "Spring", "React", "other" ],
       stroke: { width: 3 },
       fill: { opacity: 0.5 },
       markers: {
@@ -46,7 +46,7 @@ const Radar = () => {
 
   return (
     <ReactApexChart options={config.options} series={[ { 
-      data: [ java, spring, react, php, css,linux] 
+      data: [ java, spring, react,linux] 
     } ]} type="radar" />
   );
 };

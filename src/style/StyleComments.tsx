@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 
 const Table = styled.table`
-font-size: 12px;
-text-align: left;
+  font-size: 12px;
+  text-align: left;
   cellspacing="0" cellpadding="0"
   background-color: lightblue;
   border-radius: 5px;
-
   color: white;
   width: 60%;
   margin-left: 20%;
