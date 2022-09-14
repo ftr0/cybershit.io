@@ -68,7 +68,7 @@ const downloadFile = () => {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Button onClick={downloadFile}>download as file</Button>
         <Button onClick={downloadFile}>download as pdf</Button>
-        <br/>
+        <br/><br/>
         <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
 
         <BadgeBox>
