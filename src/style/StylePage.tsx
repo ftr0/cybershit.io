@@ -12,7 +12,6 @@ const Page = styled.div`
 const FooterPage = styled.div`
   margin-left: 20%;
   margin-right: 20%;
- 
   width: 60%;
   padding-top: 100px;
 `
@@ -42,7 +41,8 @@ overflow: hidden;
   line-height: 2;
   @media (max-width: 768px) {
     letter-spacing: 0px;
-    font-size:3px;
+    font-size:6px;
+    margin: 0px;
 }
 `
 
@@ -66,6 +66,7 @@ const ChartDiv = styled.div`
 `
 
 
+
 const InputArea = styled.div`
 background: #191421;
 border: 1px solid black;
@@ -73,12 +74,14 @@ border-radius: 10px;
 text-align: center;
 margin-left: 20%;
 margin-right: 20%;
-padding: 50px;
 letter-spacing: 1px;
 line-height: 2;
 @media (max-width: 768px) {
   letter-spacing: 0px;
   font-size:3px;
+  margin: 0px;
+  padding-top:10px;
+  color: blue;
 }
 `
 
@@ -89,7 +92,14 @@ const Logo = styled.img`
   @media (max-width: 768px) {
   width: 50%;
   margin:0px;
+  
 }
 `
 
-export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea};
+const Box = styled.div`
+  width: 100%;
+  margin-bottom: 50px;
+}
+`
+
+export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box};

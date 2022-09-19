@@ -67,9 +67,9 @@ const handleChangeAuthor = (event: React.ChangeEvent<HTMLInputElement>) => {
 
   return (
     <InputArea>
-
       <img src={avatar} width="50px" height="50px"/><Input type="text" maxLength={15} onChange={handleChangeAuthor} value={author} />
-      <InputChat maxLength={600}  onChange={handleChangeComment} value={comment} ></InputChat><ButtonSend onClick={handleClick}> send</ButtonSend>
+      <InputChat maxLength={600}  onChange={handleChangeComment} value={comment} ></InputChat>
+      <ButtonSend onClick={handleClick}> send</ButtonSend>
         { errorComment == '' ? <p></p> : <Error>{errorComment}</Error>}
         { errorAuthor == '' ? <p></p> : <Error>{errorAuthor}</Error>  }
         <div>

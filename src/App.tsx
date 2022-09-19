@@ -6,41 +6,25 @@ import { Page, HeaderPage, FooterPage } from "./style/StylePage"
 import ListComments from "./pages/PageComments"
 import FormComment from './components/FormComment';
 import PageHome from './pages/PageHome';
-import './style/animation.scss';
+import  Background  from './components/Background';
 
 
 const App = () => {
   let click = new Audio("https://cybershit.io/sounds/click1.mp3")
-
   const [site, setSite] = useState("home");
-
   function siteHome() { setSite("home");click.play(); }
   function siteCode() { setSite("code");click.play(); }
   function siteComments() { setSite("comments");click.play(); }
-  
   return (
     <Page>
 
-<div className="area" >
-            <ul className="items">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
-
+      <Background/>
 
       <HeaderPage>
-        <Link onClick={siteHome}>🏠</Link>
-        <Link onClick={siteCode}>📁</Link>
-        <Link onClick={siteComments}>💬</Link>
+        
+        <Link id="home" onClick={siteHome}>🏠</Link>
+        <Link id="files" onClick={siteCode}>📁</Link>
+        <Link id="chat" onClick={siteComments}>💬</Link>
       </HeaderPage>
 
       <FadeIn>

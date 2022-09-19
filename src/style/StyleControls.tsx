@@ -10,6 +10,11 @@ margin:10px;
 }
 @media (max-width: 768px) {
 }
+animation: fadeIn 2s;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 `
 const Button = styled.button`
 cursor: pointer;
@@ -71,22 +76,23 @@ border: 1px solid black;
 
 
 const InputChat = styled.input`
-width: 50%;
-color:grey;
-background: #202733;
-border-radius: 10px;
-border: 1px solid black;
-
+  width: 50%;
+  color:grey;
+  background: #202733;
+  border-radius: 10px;
+  border: 1px solid black;
   padding: 10px;
   margin: 10px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
-    width: 100%;
-    margin: 0px;
+    width: 80%;
+    margin-left: 0px;
+    margin-right: 0px;
     border: none;
     margin-bottom:40px;
     margin-top:20px;
     padding: 5%;
+    color: blue;
   }
 `
 
@@ -101,6 +107,15 @@ const Select = styled.select`
   margin: 5px;
   text-align: center;
   width: 100px;
+  @media (max-width: 768px) {
+    width: 80%;
+    margin: 0px;
+    margin-bottom:40px;
+    margin-top:0px;
+  }
+  &:hover{
+      color: palevioletred;
+  }
 `
 
 const Badge = styled.button`
@@ -113,6 +128,15 @@ const Badge = styled.button`
   margin: 5px;
   text-align: center;
   width: 120px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+  }
+  &:hover{
+      color: palevioletred;
+  }
 `
 
 const Option = styled.option`
@@ -143,6 +167,7 @@ const TextBox = styled.textarea`
   margin: 0px;
   border: none;
   padding: 5%;
+  
   }
 `
 const Error = styled.div`

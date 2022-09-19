@@ -7,7 +7,7 @@ type RadarInfos = {
   react: any;
   css: any;
   php: any;
-  linux: any;
+  other: any;
 }
 
 const Radar = () => {
@@ -22,19 +22,17 @@ const Radar = () => {
   }, [])
 
   var temp = id.at(0);
-
   var java = temp?.java;
   var spring = temp?.spring;
   var react = temp?.react;
   var php = temp?.php;
-  var css = temp?.css;
-  var linux = 2;
-  var other = 7;
+  var other = 6;
+
 
   const config = {
     options: {
       chart: { toolbar: { show: false }  },
-      labels: [ "Java", "Spring", "React", "other" ],
+      labels: [ "Java", "Spring", "React", "php","other" ],
       stroke: { width: 3 },
       fill: { opacity: 0.5 },
       markers: {
@@ -46,7 +44,7 @@ const Radar = () => {
 
   return (
     <ReactApexChart options={config.options} series={[ { 
-      data: [ java, spring, react,linux] 
+      data: [ java, spring, react, php,other] 
     } ]} type="radar" />
   );
 };

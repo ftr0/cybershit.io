@@ -18,19 +18,14 @@ const PageCode  = () => {
   const [codeReactList, setCodeReactList] = useState<Code[]>([])
   const [codeSpringList, setCodeSpringList] = useState<Code[]>([])
   const [codeOtherList, setCodeOtherList] = useState<Code[]>([])
-  const [source, setSource] = useState("choose code from dropdown menu");
-
-
-
-
-
+  const [source, setSource] = useState("loading...");
 
   useEffect(() => {
-   
     fetch('https://www.cybershit.io/api/service.php?info=codeJava').then(response => response.json()).then(res => setCodeJavaList(res)).then(() => setStatusCodeJava("java code"));
     fetch('https://www.cybershit.io/api/service.php?info=codeReact').then(response => response.json()).then(res => setCodeReactList(res)).then(() => setStatusCodeReact("react code"));
     fetch('https://www.cybershit.io/api/service.php?info=codeSpring').then(response => response.json()).then(res => setCodeSpringList(res)).then(() => setStatusCodeSpring("spring boot code"));
-    fetch('https://www.cybershit.io/api/service.php?info=codeOther').then(response => response.json()).then(res => setCodeOtherList(res)).then(() => setStatusCodeOther("other code"));
+    fetch('https://www.cybershit.io/api/service.php?info=codeOther').then(response => response.json()).then(res => setCodeOtherList(res)).then(() => setStatusCodeOther("other code"))
+    .then(() => setSource("select code"));
     const interval=setInterval(()=>{
     
      },50000)
@@ -44,11 +39,10 @@ const PageCode  = () => {
     setSource(event.target.value);
   };
 
- let content = "heftig";
 
 const downloadFile = () => {
     const element = document.createElement("a");
-    const file = new Blob([content], {
+    const file = new Blob(["content"], {
       type: "text/plain"
     });
     element.href = URL.createObjectURL(file);
@@ -59,17 +53,15 @@ const downloadFile = () => {
 
   return (
     <div>
-      <h2>Coding Cheats Sheets</h2>
-      
+      <h1>coding cheats sheets</h1>
         <Select onChange={handleChange}><Option>{StatusCodeJava}</Option>{codeJavaList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeSpring}</Option>{codeSpringList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeReact}</Option>{codeReactList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
         <Select onChange={handleChange}><Option>{StatusCodeOther}</Option>{codeOtherList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button onClick={downloadFile}>download as file</Button>
-        <Button onClick={downloadFile}>download as pdf</Button>
+        <Button onClick={downloadFile}>download file</Button>
         <br/><br/>
         <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
+
 
         <BadgeBox>
           {codeJavaList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
