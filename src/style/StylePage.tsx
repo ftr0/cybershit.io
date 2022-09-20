@@ -102,4 +102,13 @@ const Box = styled.div`
 }
 `
 
-export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box};
+
+const Avatar = styled.img`
+  margin:10px;
+  cursor:pointer;
+  width: 50px;
+  height: 50px;
+}
+`
+
+export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box,Avatar};

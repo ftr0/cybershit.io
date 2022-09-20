@@ -4,6 +4,7 @@ import { CodeArea } from "../style/StylePage"
 import React, { useState, useEffect } from 'react';
 import { Badge } from "../style/StyleControls"
 import { BadgeBox } from "../style/StylePage"
+
 type Code = {
   filename: string;
   content: string;
@@ -18,7 +19,8 @@ const PageCode  = () => {
   const [codeReactList, setCodeReactList] = useState<Code[]>([])
   const [codeSpringList, setCodeSpringList] = useState<Code[]>([])
   const [codeOtherList, setCodeOtherList] = useState<Code[]>([])
-  const [source, setSource] = useState("loading...");
+  const [filename, setFilename] = useState<string>("loading...")
+  const [source, setSource] = useState("loading...")
 
   useEffect(() => {
     fetch('https://www.cybershit.io/api/service.php?info=codeJava').then(response => response.json()).then(res => setCodeJavaList(res)).then(() => setStatusCodeJava("java code"));
@@ -33,41 +35,42 @@ const PageCode  = () => {
   }, [])
 
 
-  const handleChange = (event:any) => {
-    let audioClick1 = new Audio("https://cybershit.io/sounds/click1.mp3")
-    audioClick1.play();
-    setSource(event.target.value);
-  };
-
-
-const downloadFile = () => {
+  const downloadFile = () => {
     const element = document.createElement("a");
-    const file = new Blob(["content"], {
+    const file = new Blob([source], {
       type: "text/plain"
     });
     element.href = URL.createObjectURL(file);
-    element.download = "test.txt";
+    element.download = filename+".txt";
     document.body.appendChild(element);
     element.click();
   };
 
+
+  const handleChange = (filename:any, content:any) => {
+    let audioClick1 = new Audio("https://cybershit.io/sounds/click1.mp3")
+    audioClick1.play();
+    setSource(content);
+    setFilename(filename);
+  };
+
+
   return (
     <div>
       <h1>coding cheats sheets</h1>
-        <Select onChange={handleChange}><Option>{StatusCodeJava}</Option>{codeJavaList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-        <Select onChange={handleChange}><Option>{StatusCodeSpring}</Option>{codeSpringList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-        <Select onChange={handleChange}><Option>{StatusCodeReact}</Option>{codeReactList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
-        <Select onChange={handleChange}><Option>{StatusCodeOther}</Option>{codeOtherList.map(code => (<Option value={code.content}>{code.filename}</Option>))}</Select>
+        <Select><Option>{StatusCodeJava}</Option>{codeJavaList.map(code => (<Option onClick={event => {handleChange(code.filename, code.content)}}>{code.filename}</Option>))}</Select>
+        <Select><Option>{StatusCodeSpring}</Option>{codeSpringList.map(code => (<Option onClick={event => {handleChange(code.filename, code.content)}}>{code.filename}</Option>))}</Select>
+        <Select><Option>{StatusCodeReact}</Option>{codeReactList.map(code => (<Option onClick={event => {handleChange(code.filename, code.content)}}>{code.filename}</Option>))}</Select>
+        <Select><Option>{StatusCodeOther}</Option>{codeOtherList.map(code => (<Option onClick={event => {handleChange(code.filename, code.content)}}>{code.filename}</Option>))}</Select>
         <Button onClick={downloadFile}>download file</Button>
-        <br/><br/>
+        
         <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
-
-
+        
         <BadgeBox>
-          {codeJavaList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
-          {codeReactList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
-          {codeSpringList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
-          {codeOtherList.map(code => (<Badge onClick={handleChange} value={code.content}>{code.filename}</Badge>))}
+          {codeJavaList.map(code => (<Badge onClick={event => {handleChange(code.filename, code.content)}} >{code.filename}</Badge>))}
+          {codeReactList.map(code => (<Badge onClick={event => {handleChange(code.filename, code.content)}} >{code.filename}</Badge>))}
+          {codeSpringList.map(code => (<Badge onClick={event => {handleChange(code.filename, code.content)}} >{code.filename}</Badge>))}
+          {codeOtherList.map(code => (<Badge onClick={event => {handleChange(code.filename, code.content)}} >{code.filename}</Badge>))}
         </BadgeBox>
       </div>
   );

@@ -5,7 +5,6 @@ type RadarInfos = {
   java: any;
   spring: any;
   react: any;
-  css: any;
   php: any;
   other: any;
 }
@@ -22,30 +21,23 @@ const Radar = () => {
   }, [])
 
   var temp = id.at(0);
-  var java = temp?.java;
-  var spring = temp?.spring;
-  var react = temp?.react;
-  var php = temp?.php;
-  var other = 6;
-
 
   const config = {
     options: {
       chart: { toolbar: { show: false }  },
       labels: [ "Java", "Spring", "React", "php","other" ],
-      stroke: { width: 3 },
+      stroke: { width: 2 },
       fill: { opacity: 0.5 },
-      markers: {
-        size: 0
-    },
-      tooltips: false,
+      markers: { size: 0 },
     }
   };
 
   return (
-    <ReactApexChart options={config.options} series={[ { 
-      data: [ java, spring, react, php,other] 
-    } ]} type="radar" />
+    <ReactApexChart 
+      options={config.options} 
+      series={[ {  data: [ temp?.java, temp?.spring, temp?.react, temp?.php, 6]  } ]} 
+      type="radar" 
+    />
   );
 };
 

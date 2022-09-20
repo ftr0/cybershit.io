@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Column1, Column2, Column3, Column4,CommentLine} from "../style/StyleComments"
+import { Table, Column1, Column2, Column3, Column4} from "../style/StyleComments"
 
 type Comment = {
   date: Date;
@@ -13,6 +13,7 @@ const ListComments = () => {
 const [comments, setComments] = useState<Comment[]>([])
 const [error, setError] = useState({})
 let uhr = "https://cdn.pixabay.com/photo/2014/04/02/14/05/clock-306096_960_720.png";
+
 
 
 function getPosts() {
@@ -52,14 +53,12 @@ function getPosts() {
               <img src={uhr} width="100%" title={new Intl.DateTimeFormat('en-GB', {
                     month: 'long',
                     day: '2-digit',
-                    //year: 'numeric',
+                    year: 'numeric',
                     hour: '2-digit',
-                    minute: '2-digit',
-                    //second: '2-digit',
+                    minute: '2-digit'
                 }).format(new Date(comment.date))} />
               </Column4>
             </tr>
-          <br/>
           </div>
           ))}
           </Table>

@@ -15,18 +15,16 @@ const App = () => {
   function siteHome() { setSite("home");click.play(); }
   function siteCode() { setSite("code");click.play(); }
   function siteComments() { setSite("comments");click.play(); }
+
+  
   return (
     <Page>
-
       <Background/>
-
       <HeaderPage>
-        
-        <Link id="home" onClick={siteHome}>🏠</Link>
-        <Link id="files" onClick={siteCode}>📁</Link>
-        <Link id="chat" onClick={siteComments}>💬</Link>
+        <Link onClick={siteHome}>🏠</Link>
+        <Link onClick={siteCode}>📁</Link>
+        <Link onClick={siteComments}>💬</Link>
       </HeaderPage>
-
       <FadeIn>
         { site === 'home' &&  <PageHome />}
         { site === 'code' && <PageCode /> }
