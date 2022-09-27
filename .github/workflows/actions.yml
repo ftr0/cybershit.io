@@ -34,3 +34,7 @@ jobs:
         run: |
           echo line 1,
           echo line 2.
+          
+      - name: Install Dependencies
+        run: npm install
+
