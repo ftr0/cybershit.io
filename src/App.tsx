@@ -32,7 +32,7 @@ const App = () => {
         { site === 'comments' &&  <FormComment />}
       </FadeIn>
       <FooterPage>
-        <a href="https://github.com/ftr0/cybershit.io" target="_blank">view source on github</a>
+        <a href="https://github.com/ftr0/cybershit.io" target="_blank">view source on github.</a>
       </FooterPage>
     </Page>
   );
