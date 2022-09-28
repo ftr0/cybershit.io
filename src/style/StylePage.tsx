@@ -29,13 +29,14 @@ const HeaderPage = styled.div`
 `
 
 const CodeArea = styled.div`
-overflow: hidden;
+margin-top:20px;
+  overflow: hidden;
   background: #191421;
   border: 1px solid black;
   border-radius: 10px;
   text-align: left;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
   padding: 50px;
   letter-spacing: 1px;
   line-height: 2;
@@ -56,9 +57,7 @@ const BadgeBox = styled.div`
 `
 
 const ChartDiv = styled.div`
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 100%;
   @media (max-width: 768px) {
   width: 100%;
   margin:0px;
@@ -111,4 +110,55 @@ const Avatar = styled.img`
 }
 `
 
-export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box,Avatar};
+const TableLatest = styled.table`
+width:90%;
+background: #191421;
+border: 1px solid black;
+border-radius: 10px;
+text-align: center;
+margin-left: 5%;
+margin-right: 5%;
+letter-spacing: 1px;
+line-height: 2;
+@media (max-width: 768px) {
+  letter-spacing: 0px;
+  font-size:3px;
+  margin: 0px;
+  padding-top:10px;
+  color: blue;
+}
+`
+const TableTDLatest = styled.td`
+width:30%;
+@media (max-width: 768px) {
+  letter-spacing: 0px;
+  font-size:3px;
+  margin: 0px;
+  padding-top:10px;
+  color: blue;
+}
+`
+
+
+const Container = styled.div`
+margin-top:20px;
+width:60%;
+background: #191421;
+border: 1px solid black;
+border-radius: 10px;
+text-align: center;
+margin-left: 20%;
+margin-right: 20%;
+letter-spacing: 1px;
+line-height: 2;
+@media (max-width: 768px) {
+  letter-spacing: 0px;
+  font-size:3px;
+  margin: 0px;
+  padding-top:10px;
+  color: blue;
+}
+`
+
+
+export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box,Avatar,TableLatest,TableTDLatest,Container};

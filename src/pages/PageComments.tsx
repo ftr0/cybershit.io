@@ -17,7 +17,7 @@ let uhr = "https://cdn.pixabay.com/photo/2014/04/02/14/05/clock-306096_960_720.p
 
 
 function getPosts() {
-    fetch('https://www.cybershit.io/api/service.php?info=comments')
+    fetch('https://www.cybershit.io/api/getComments.php')
     .then(response => response.json())
     .then(res => setComments(res))
     .catch(err => setError(err))

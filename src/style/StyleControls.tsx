@@ -119,7 +119,26 @@ const Select = styled.select`
 `
 
 const Badge = styled.button`
-  float: left;
+
+  color:grey;
+  background: #202733;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 120px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+  }
+  &:hover{
+      color: palevioletred;
+  }
+`
+const BadgeStared = styled.button`
   color:grey;
   background: #202733;
   border-radius: 5px;
@@ -183,4 +202,4 @@ const Error = styled.div`
 `
 
 
-export { Button, Input, TextBox, Error, Option, Select, Link,Badge,InputChat,ButtonSend };
+export { Button, Input, TextBox, Error, Option, Select, Link,Badge,InputChat,ButtonSend , BadgeStared};
