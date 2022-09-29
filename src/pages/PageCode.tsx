@@ -1,4 +1,4 @@
-import { Badge, Option, Select, Button, BadgeStared} from "../style/StyleControls"
+import { Badge, Option, Select, Button, BadgeStared, TextBox} from "../style/StyleControls"
 import { BadgeBox, CodeArea, Container } from "../style/StylePage"
 import React, { useState, useEffect } from 'react';
 
@@ -25,7 +25,7 @@ const PageCode  = () => {
   useEffect(() => {
     getPosts()
     const interval=setInterval(()=>{
-     },50000)
+     },1000)
      return()=>clearInterval(interval)
   }, [])
 
@@ -35,9 +35,8 @@ const PageCode  = () => {
     fetch('https://www.cybershit.io/api/JSONCodeReact.php').then(response => response.json()).then(res => setCodeReactList(res)).then(() => setStatusCodeReact("react code"));
     fetch('https://www.cybershit.io/api/JSONCodeSpring.php').then(response => response.json()).then(res => setCodeSpringList(res)).then(() => setStatusCodeSpring("spring boot code"));
     fetch('https://www.cybershit.io/api/JSONCodeOther.php').then(response => response.json()).then(res => setCodeOtherList(res)).then(() => setStatusCodeOther("other code"));
-    fetch('https://www.cybershit.io/api/displayStared.php').then(response => response.json()).then(res => setCodes(res)).then(() => setStared(stared));
+    fetch('https://www.cybershit.io/api/displayStared.php').then(response => response.json()).then(res => setCodes(res)).then(() => setStared(stared)).then(() => setSource("print hello world"))
   }
-
 
 
 
@@ -88,10 +87,10 @@ const PageCode  = () => {
         <Button onClick={starCode}>
             { stared ==='star' ? "☆unstar" :"★star"}
         </Button>
+        <Button >edit</Button>
         <Button onClick={downloadFile}>download file</Button>
-
-     
-          <BadgeBox>
+        
+        <BadgeBox>
           {codes.map(code => (
           <span>
              <BadgeStared onClick={event => {handleChange(code.filename, code.content, code.stared)}}>★{code.filename}</BadgeStared>
@@ -100,7 +99,8 @@ const PageCode  = () => {
           </BadgeBox>
 
           </Container>
-        <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
+          <CodeArea id ="test"><pre>{source}</pre> </CodeArea>
+       
         <Container>
           {codeJavaList.map(code => (<Badge onClick={event => {handleChange(code.filename, code.content, code.stared)}} >{code.filename}</Badge>))}
           {codeReactList.map(code => (<Badge onClick={event => {handleChange(code.filename, code.content, code.stared)}} >{code.filename}</Badge>))}

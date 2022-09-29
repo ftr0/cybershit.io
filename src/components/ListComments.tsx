@@ -34,7 +34,6 @@ function getPosts() {
 
   return (
     <div>
-      <h1>comments</h1>
       <Table>
         {comments.map(comment => (
           <div style={{backgroundColor:"#191421", marginBottom:"10px", border: "1px solid black", borderRadius:"10px"}}>

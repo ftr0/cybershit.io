@@ -8,9 +8,10 @@ const Table = styled.table`
   background-color: lightblue;
   border-radius: 5px;
   color: white;
-  width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
+  width: 90%;
+  margin-top: 25px;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-bottom: 20px;
   @media (max-width: 768px) {
     width: 100%;

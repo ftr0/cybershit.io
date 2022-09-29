@@ -71,8 +71,9 @@ background: #191421;
 border: 1px solid black;
 border-radius: 10px;
 text-align: center;
-margin-left: 20%;
-margin-right: 20%;
+margin-top:25px;
+margin-left: 5%;
+margin-right: 5%;
 letter-spacing: 1px;
 line-height: 2;
 @media (max-width: 768px) {
@@ -111,13 +112,14 @@ const Avatar = styled.img`
 `
 
 const TableLatest = styled.table`
-width:90%;
+width:40%;
 background: #191421;
-border: 1px solid black;
+padding-top:45px;
 border-radius: 10px;
 text-align: center;
-margin-left: 5%;
-margin-right: 5%;
+margin-left: 30%;
+margin-right: 30%;
+
 letter-spacing: 1px;
 line-height: 2;
 @media (max-width: 768px) {
@@ -143,6 +145,7 @@ width:30%;
 const Container = styled.div`
 margin-top:20px;
 width:60%;
+padding-bottom: 25px;
 background: #191421;
 border: 1px solid black;
 border-radius: 10px;
