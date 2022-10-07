@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-const Link = styled.span`
-font-size: 30px;
+const Link = styled.div`
+float:left;
+font-size: 15px;
 cursor: pointer;
+padding-right:20px;
 margin:10px;
  &:hover{
   -webkit-transition: all .6s ease;
@@ -18,9 +20,9 @@ animation: fadeIn 2s;
 `
 const Button = styled.button`
 cursor: pointer;
-background: #202733;
-color:grey;
-border-radius: 5px;
+background: #e9ecee;
+color:black;
+font-size:10px;
 border: 1px solid darkblue;
 padding: 5px;
 margin: 5px;
@@ -37,11 +39,9 @@ letter-spacing: 1px;
 `
 
 const ButtonSend = styled.button`
-border: 1px solid black;
-  background: #191421;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
+
+padding: 2px;
+margin: 2px;
   text-align: center;
   letter-spacing: 1px;
   @media (max-width: 768px) {
@@ -53,15 +53,8 @@ border: 1px solid black;
 `
 
 const Input = styled.input`
-border: 1px solid black;
-color:grey;
-background: #202733;
-border-radius: 5px;
-border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
+padding: 2px;
+margin: 2px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
     width: 80%;
@@ -76,13 +69,9 @@ border: 1px solid black;
 
 
 const InputChat = styled.input`
-  width: 50%;
-  color:grey;
-  background: #202733;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  width: 100%;
+  padding: 2px;
+  margin: 2px;
   letter-spacing: 1px;
   @media (max-width: 768px) {
     width: 80%;
@@ -99,9 +88,9 @@ const InputChat = styled.input`
 
 
 const Select = styled.select`
-  color:grey;
-  background: #202733;
-  border-radius: 5px;
+  color:black;
+  background: #e9ecee;
+  font-size:10px;
   border: 1px solid black;
   padding: 5px;
   margin: 5px;
@@ -120,14 +109,14 @@ const Select = styled.select`
 
 const Badge = styled.button`
 
-  color:grey;
-  background: #202733;
-  border-radius: 5px;
+  color:black;
+  background: #e9ecee;
+  font-size:10px;
   border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
+  padding: 3px;
+  margin: 3px;
   text-align: center;
-  width: 120px;
+  width: 100px;
   @media (max-width: 768px) {
     width: 100%;
     margin: 0px;
@@ -139,14 +128,14 @@ const Badge = styled.button`
   }
 `
 const BadgeStared = styled.button`
-  color:grey;
-  background: #202733;
-  border-radius: 5px;
+  font-size:10px;
+  color:black;
+  background: #e9ecee;
   border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
+  padding: 3px;
+  margin: 3px;
   text-align: center;
-  width: 120px;
+  width: 100px;
   @media (max-width: 768px) {
     width: 100%;
     margin: 0px;
@@ -159,8 +148,8 @@ const BadgeStared = styled.button`
 `
 
 const Option = styled.option`
-  color:grey;
-  background: #202733;
+  color:black;
+  background: #a3a4a6;
   border-radius: 5px;
   border: 1px solid black;
   padding: 5px;

@@ -1,32 +1,40 @@
 import ReactApexChart from "react-apexcharts";
 import {useState, useEffect} from 'react'
-
-type RadarInfos = {
-  java: any;
-  spring: any;
-  react: any;
-  php: any;
-  other: any;
-}
+import {RadarChartInfos} from "../types/RadarChartInfos"
 
 const Radar = () => {
-  const [id, setId] = useState<RadarInfos[]>([])
-  const [error, setError] = useState({})
+  const [id, setId] = useState<RadarChartInfos[]>([])
 
   useEffect(() => {
     fetch('https://cybershit.io/api/displayRadar.php')
     .then(response => response.json())
     .then(res => setId(res))
-    .catch(err => setError(err))
+    .catch(err => console.log(err))
   }, [])
 
   var temp = id.at(0);
 
   const config = {
     options: {
-      chart: { toolbar: { show: false }  },
-      labels: [ "Java", "Spring", "React", "php","other" ],
-      stroke: { width: 2 },
+      plotOptions: {
+        radar: {
+          polygons: {
+            strokeColor: '#e8e8e8',
+            fill: { colors: ['#f8f8f8', '#fff'] }
+          }
+        }
+      },
+      xaxis: {
+        categories: [ "java", "spring", "react", "php","other" ],
+        labels: {
+          style: {
+            colors: ["black","green","blue","red", "purple"],
+            fontSize: '15px',
+            fontFamily: 'Arial'
+          }
+        }
+      },
+      chart: { toolbar: { show: false }},
       fill: { opacity: 0.5 },
       markers: { size: 0 },
     }

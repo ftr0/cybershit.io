@@ -3,10 +3,14 @@ import styled from 'styled-components';
 const Page = styled.div`
  width: 100%;
  text-align: center;
- color: white;
- font-size: 12px;
+ color: black;
+ font-size: 10px;
  padding-bottom:50px;
  letter-spacing: 2px;
+`
+
+const Wrapper = styled.div`
+
 `
 
 const FooterPage = styled.div`
@@ -17,10 +21,14 @@ const FooterPage = styled.div`
 `
 
 const HeaderPage = styled.div`
-  background: #361735;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+height: 20px;
+  color: black;
+  background: white;
+  border-bottom: 1px solid;
+  text-align: left;
+  padding-left:20px;
+
+  padding-bottom: 15px;
   @media (max-width: 768px) {
   letter-spacing: 16px;
   width: 100%;
@@ -29,17 +37,16 @@ const HeaderPage = styled.div`
 `
 
 const CodeArea = styled.div`
-margin-top:20px;
+  margin-top:20px;
   overflow: hidden;
-  background: #191421;
+  background: #e9ecee;
   border: 1px solid black;
-  border-radius: 10px;
   text-align: left;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-right: 2%;
   padding: 50px;
   letter-spacing: 1px;
   line-height: 2;
+  color: black;
   @media (max-width: 768px) {
     letter-spacing: 0px;
     font-size:6px;
@@ -48,11 +55,11 @@ margin-top:20px;
 `
 
 const BadgeBox = styled.div`
+color: black;
   padding: 5px;
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
-  font-size: 10px;s
   width: 70%;
 `
 
@@ -67,13 +74,9 @@ const ChartDiv = styled.div`
 
 
 const InputArea = styled.div`
-background: #191421;
-border: 1px solid black;
-border-radius: 10px;
-text-align: center;
+
+vertical-align: middle;
 margin-top:25px;
-margin-left: 5%;
-margin-right: 5%;
 letter-spacing: 1px;
 line-height: 2;
 @media (max-width: 768px) {
@@ -104,22 +107,17 @@ const Box = styled.div`
 
 
 const Avatar = styled.img`
-  margin:10px;
+  
   cursor:pointer;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 `
 
 const TableLatest = styled.table`
-width:40%;
-background: #191421;
-padding-top:45px;
-border-radius: 10px;
-text-align: center;
-margin-left: 30%;
-margin-right: 30%;
+width:100%;
 
+text-align: center;
 letter-spacing: 1px;
 line-height: 2;
 @media (max-width: 768px) {
@@ -141,17 +139,17 @@ width:30%;
 }
 `
 
+const CodeMenu = styled.div`
+float:left;
+color: black;
 
-const Container = styled.div`
-margin-top:20px;
-width:60%;
+width:30%;
+margin-left:2%;
+margin-right:2%;
 padding-bottom: 25px;
-background: #191421;
 border: 1px solid black;
-border-radius: 10px;
+
 text-align: center;
-margin-left: 20%;
-margin-right: 20%;
 letter-spacing: 1px;
 line-height: 2;
 @media (max-width: 768px) {
@@ -163,5 +161,56 @@ line-height: 2;
 }
 `
 
+const CodeOptions = styled.div`
 
-export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box,Avatar,TableLatest,TableTDLatest,Container};
+@media (max-width: 768px) {
+ 
+}
+`
+
+
+const Container = styled.div`
+float:left;
+color: black;
+margin-top:20px;
+width:47%;
+margin:1%;
+padding-bottom: 25px;
+border: 1px solid black;
+
+text-align: center;
+letter-spacing: 1px;
+line-height: 2;
+@media (max-width: 768px) {
+  letter-spacing: 0px;
+  font-size:3px;
+  margin: 0px;
+  padding-top:10px;
+  color: blue;
+  width:100%;
+}
+`
+
+const Container30 = styled.div`
+float:left;
+color: black;
+margin-top:20px;
+width:32%;
+margin:5px;
+padding-bottom: 25px;
+border: 1px solid black;
+text-align: center;
+letter-spacing: 1px;
+line-height: 2;
+@media (max-width: 768px) {
+  letter-spacing: 0px;
+  font-size:3px;
+  margin: 0px;
+  padding-top:10px;
+  color: blue;
+  width:100%;
+}
+`
+
+
+export { Page, HeaderPage, FooterPage, CodeArea, BadgeBox, ChartDiv, Logo,InputArea, Box,Avatar,TableLatest,TableTDLatest,Container,CodeOptions,CodeMenu,Container30,Wrapper};

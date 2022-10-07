@@ -2,17 +2,9 @@ import styled from 'styled-components';
 
 
 const Table = styled.table`
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
-  cellspacing="0" cellpadding="0"
-  background-color: lightblue;
-  border-radius: 5px;
-  color: white;
-  width: 90%;
-  margin-top: 25px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 20px;
+
   @media (max-width: 768px) {
     width: 100%;
     margin: 0px;
@@ -24,24 +16,32 @@ const Table = styled.table`
 `
 
 const Column1 = styled.td`
+vertical-align: middle;
 width: 5%;
-padding: 10px;
+padding: 5spx;
+
 `
 
 const Column2 = styled.td`
+font-weight:bold;
+vertical-align: middle;
 width: 15%;
-padding: 10px;
+padding: 5px;
+
 `
 
 const Column3 = styled.td`
+vertical-align: middle;
 width: 76%;
-padding: 10px;
+padding: 5px;
+
 `
 
-
 const Column4 = styled.td`
+vertical-align: middle;
 width: 4%;
-padding: 10px;
+padding: 5px;
+
 `
 
 const CommentLine = styled.div`
