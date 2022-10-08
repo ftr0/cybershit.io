@@ -26,5 +26,5 @@ jobs:
           echo line 2.
           
       - name: Install Dependencies and run test
-        run: npm install && npm test
+        run: npm install
 
