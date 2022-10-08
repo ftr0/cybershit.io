@@ -10,7 +10,8 @@ export interface Player {
       win_rate: number;
       avatars:{
           full:string;
-        }
+        },
+      rank_level: string;
     }]
   }
   

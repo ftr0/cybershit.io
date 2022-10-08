@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-let url = "http://localhost:3001/"
+let url = "http://localhost:3000/"
 
 test('h1 exist', async ({ page }) => {
   await page.goto(url)

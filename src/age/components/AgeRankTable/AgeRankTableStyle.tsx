@@ -24,6 +24,10 @@ const TableAge = styled.div`
  width: 100%;
 `
 
+const TableTDRank = styled.div`
+ width: 100%;
+`
+
 const TDRank = styled.td`
  width: 10%;
 `

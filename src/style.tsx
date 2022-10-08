@@ -51,11 +51,6 @@ margin:10px;
 }
 @media (max-width: 768px) {
 }
-animation: fadeIn 2s;
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 `
 
 
@@ -74,11 +69,7 @@ margin:10px;
 }
 @media (max-width: 768px) {
 }
-animation: fadeIn 2s;
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+
 `
 
 

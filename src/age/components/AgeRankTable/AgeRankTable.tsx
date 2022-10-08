@@ -22,6 +22,7 @@ export const AgeRankTable = (props: Settings) =>
             <TDRank>{item.rank}</TDRank>
             <TDAvatar><img src={item.avatars.full} width="20px" height="20px;"/></TDAvatar>
             <TDName>{item.name}</TDName>
+            <td>{item.rank_level}</td>
             <TDWinsCount>{item.wins_count}</TDWinsCount>
             <TDLoseCount>{item.losses_count}</TDLoseCount>
             <TDGamesCount>{item.games_count}</TDGamesCount>
