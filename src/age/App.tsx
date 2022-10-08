@@ -1,6 +1,5 @@
 import AgeRankTable from "./components/AgeRankTable/AgeRankTable"
 import { Page, Container30,HeaderPage } from "./style"
-import {TitleTable} from "./components/AgeRankTable/AgeRankTableStyle"
 
 const PageAge = () => {
   return (
