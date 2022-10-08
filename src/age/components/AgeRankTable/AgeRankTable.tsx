@@ -20,7 +20,7 @@ export const AgeRankTable = (props: Settings) =>
         {playerList?.players.map(item => (
           <tr>
             <TDRank>{item.rank}</TDRank>
-            <TDAvatar><img src={item.avatars.full} width="20px" height="20px;"/></TDAvatar>
+            <TDAvatar><img src={item.avatars.full} alt="age4 rank" width="20px" height="20px;"/></TDAvatar>
             <TDName>{item.name}</TDName>
             <TDRank>{item.rank_level}</TDRank>
             <TDWinsCount>{item.wins_count}</TDWinsCount>
