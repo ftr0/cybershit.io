@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ "version6" ]
+  pull_request:
+    branches: [ "version6" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      
+      - name: run docker
+        run: sudo docker run hello-world
+        
+
+
+          
+
+   

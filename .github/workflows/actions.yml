@@ -17,14 +17,19 @@ jobs:
       - uses: actions/setup-node@v3
       - uses: microsoft/playwright-github-action@v1
       
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
-        run: |
-          echo line 1,
-          echo line 2.
+      - name: github action www.cybershit.io
+        run: echo "juhu iam a github action"
           
-      - name: Install Dependencies and run test
-        run: npm install & npx playwright test
+      - name: install dependencies
+        run: npm install --force
+        
+      - name: install playwright
+        run: npx playwright install --force
+        
+      - name: start app
+        run: npm start
+        
+      - name: run test
+        run: npx playwright test
+
 
