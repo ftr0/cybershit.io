@@ -21,7 +21,7 @@ jobs:
         run: echo "juhu iam a github action"
           
       - name: install dependencies
-        run: npm install
+        run: npm install --force
         
       - name: install playwright
         run: npm i -D @playwright/test --force
