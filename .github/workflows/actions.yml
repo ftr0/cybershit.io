@@ -27,7 +27,7 @@ jobs:
         run: npx playwright install --force
         
       - name: start app
-        run: npm run build
+        run: npm run start
         
       - name: run test
         run: npx playwright test
