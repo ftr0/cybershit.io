@@ -55,7 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.25.2",
+    "@playwright/test": "^1.27.0",
     "@types/prismjs": "^1.26.0",
     "babel-plugin-prismjs": "^2.1.0"
   }
