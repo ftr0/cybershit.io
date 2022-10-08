@@ -18,7 +18,7 @@ jobs:
       - uses: microsoft/playwright-github-action@v1
       
       - name: github action www.cybershit.io
-        run: juhu iam a github action
+        run: echo "juhu iam a github action"
           
       - name: install dependencies
         run: npm instal
